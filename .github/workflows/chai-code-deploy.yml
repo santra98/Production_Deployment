@@ -19,7 +19,8 @@ jobs:
           host: 210.79.128.126
           username: ubuntu
           key: ${{ secrets.PRIVATE_KEY }}
-          script: cd /home/ubuntu/Production_Deployment
+          script: |
+            cd /home/ubuntu/Production_Deployment
             git pull
             npm install
             pm2 restart 0
